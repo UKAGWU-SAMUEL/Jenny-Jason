@@ -1,0 +1,218 @@
+/* ============================================================
+   Story Page — Specific Styles
+   ============================================================ */
+
+/* ---------- Hero ---------- */
+.story-hero {
+  background-image: url('../img/the first background.png');
+  background-size: cover;
+  background-position: center 30%;
+}
+
+/* ---------- Couple Photo ---------- */
+.couple-photo-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.couple-photo {
+  width: 100%;
+  max-width: 440px;
+  object-fit: cover;
+}
+
+.couple-photo-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border: 1px solid var(--jj-blush);
+  border-radius: 1.25rem;
+  z-index: -1;
+}
+
+/* ---------- Story Body ---------- */
+.story-body {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: var(--jj-muted);
+  margin-bottom: 1.25rem;
+}
+
+/* ---------- Timeline ---------- */
+.timeline-section {
+  background: var(--jj-sand);
+}
+
+.timeline {
+  position: relative;
+  padding: 1rem 0;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--jj-blush);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: calc(50% + 2rem);
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timeline-item-right {
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: calc(50% + 2rem);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 1.1rem;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--jj-white);
+  border: 1px solid var(--jj-blush);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.timeline-dot i {
+  font-size: 1rem;
+  color: var(--jj-accent);
+}
+
+.timeline-content {
+  background: #fff;
+  max-width: 280px;
+  width: 100%;
+}
+
+.timeline-year {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--jj-rose);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-content h5 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--jj-dark);
+  margin-bottom: 0.4rem;
+}
+
+/* Mobile: stack timeline */
+@media (max-width: 575.98px) {
+  .timeline::before {
+    left: 1.5rem;
+  }
+
+  .timeline-item,
+  .timeline-item.timeline-item-right {
+    justify-content: flex-start;
+    padding-right: 0;
+    padding-left: 4rem;
+  }
+
+  .timeline-dot {
+    left: 1.5rem;
+  }
+
+  .timeline-content {
+    max-width: 100%;
+  }
+}
+
+/* ---------- Gallery ---------- */
+.gallery-section {
+  background: #fff;
+}
+
+.gallery-item {
+  cursor: pointer;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+  display: block;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.06);
+}
+
+/* ---------- Closing Section ---------- */
+.closing-section {
+  background-image: url('../img/the first background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.closing-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 42, 58, 0.75);
+}
+
+.closing-quote {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.closing-quote p {
+  font-family: var(--font-serif);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.85;
+}
+
+.closing-quote footer {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--jj-rose);
+  margin-top: 1.25rem;
+}
+
+.closing-invite {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 2;
+}
+
+@media (max-width: 767.98px) {
+  .closing-section {
+    background-attachment: scroll;
+  }
+}

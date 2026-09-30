@@ -1,0 +1,587 @@
+/* ============================================================
+   J&J Wedding — Global Styles (complements Bootstrap 5)
+   ============================================================ */
+
+/* ---------- Tokens ---------- */
+:root {
+  --jj-sand: #f5f0e8;
+  --jj-blush: #e8d5c4;
+  --jj-rose: #c9956c;
+  --jj-dark: #2c2c2c;
+  --jj-muted: #6b6b6b;
+  --jj-navy: #1e2a3a;
+  --jj-white: #ffffff;
+  --jj-accent: #b07d5a;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Lato', sans-serif;
+  --transition: 0.3s ease;
+  --radius-lg: 1rem;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--jj-white);
+  color: var(--jj-dark);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ---------- Typography helpers ---------- */
+.section-pre {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--jj-accent);
+  margin-bottom: 0.4rem;
+}
+
+.section-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400;
+  color: var(--jj-dark);
+  line-height: 1.15;
+  margin-bottom: 0;
+}
+
+.divider-line {
+  width: 56px;
+  height: 1px;
+  background: var(--jj-rose);
+}
+
+/* utility spacing */
+.py-6 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* ---------- Floating Nav Pill ---------- */
+
+/* Outer wrapper — positions the pill over the page */
+.jj-nav-wrap {
+  position: fixed;
+  top: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: calc(100% - 2.5rem);
+  max-width: 900px;
+}
+
+/* The pill itself */
+.jj-navbar {
+  background: rgba(20, 20, 20, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+  padding: 0.5rem 1.25rem;
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+.jj-navbar.scrolled {
+  background: rgba(20, 20, 20, 0.82);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+}
+
+/* Logo + date on one line */
+.jj-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  text-decoration: none;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.brand-monogram {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--jj-white);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.brand-sep {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.85rem;
+}
+
+.brand-date {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+}
+
+/* Nav links */
+.jj-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.jj-navbar .nav-link {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7) !important;
+  padding: 0.45rem 0.9rem;
+  border-radius: 100px;
+  transition: color var(--transition), background var(--transition);
+}
+
+.jj-navbar .nav-link:hover {
+  color: var(--jj-white) !important;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.jj-navbar .nav-link.active {
+  color: var(--jj-white) !important;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* RSVP pill-within-pill */
+.jj-rsvp-pill {
+  background: var(--jj-accent) !important;
+  color: var(--jj-white) !important;
+  border-radius: 100px !important;
+  padding: 0.45rem 1.1rem !important;
+  margin-left: 0.4rem;
+}
+
+.jj-rsvp-pill:hover {
+  background: #96694a !important;
+  color: var(--jj-white) !important;
+}
+
+/* Mobile toggler */
+.jj-toggler {
+  background: none;
+  border: none;
+  color: var(--jj-white);
+  font-size: 1.5rem;
+  padding: 0.25rem 0.5rem;
+  line-height: 1;
+}
+
+.jj-toggler:focus {
+  box-shadow: none;
+}
+
+/* Mobile dropdown — keep pill shape on expand */
+@media (max-width: 991.98px) {
+  .jj-nav-wrap {
+    top: 0.75rem;
+    width: calc(100% - 1.5rem);
+  }
+
+  .jj-navbar {
+    border-radius: 24px;
+    padding: 0.6rem 1rem;
+  }
+
+  .jj-navbar .navbar-collapse {
+    background: rgba(20, 20, 20, 0.96);
+    border-radius: 0 0 20px 20px;
+    margin: 0.5rem -1rem -0.6rem;
+    padding: 0.75rem 1rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .jj-nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+  }
+
+  .jj-rsvp-pill {
+    margin-left: 0 !important;
+    margin-top: 0.4rem;
+  }
+}
+
+/* ---------- Hero (Home) ---------- */
+.hero-section {
+  min-height: 100vh;
+  background-image: url('../img/the first background.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+}
+
+.hero-pre {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1rem;
+}
+
+.hero-names {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color: var(--jj-white);
+  margin-bottom: 1.5rem;
+}
+
+.hero-date {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0.5rem;
+}
+
+.hero-venue {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Page Hero (inner pages) ---------- */
+.page-hero {
+  min-height: 60vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.page-hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: var(--jj-white);
+  margin: 0;
+}
+
+/* ---------- Buttons ---------- */
+.btn.jj-btn-outline {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--jj-white);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 2px;
+  padding: 0.85rem 2.5rem;
+  background: transparent;
+  transition: background var(--transition), border-color var(--transition);
+  text-decoration: none;
+}
+
+.btn.jj-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--jj-white);
+  color: var(--jj-white);
+}
+
+.btn.jj-btn-solid {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--jj-white);
+  background: var(--jj-accent);
+  border: 1px solid var(--jj-accent);
+  border-radius: 2px;
+  padding: 0.85rem 2.5rem;
+  transition: background var(--transition), transform var(--transition);
+  text-decoration: none;
+}
+
+.btn.jj-btn-solid:hover {
+  background: #96694a;
+  border-color: #96694a;
+  color: var(--jj-white);
+  transform: translateY(-1px);
+}
+
+/* ---------- Countdown ---------- */
+.countdown-section {
+  background: var(--jj-sand);
+}
+
+.countdown-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--jj-muted);
+}
+
+.countdown-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.count-num {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--jj-dark);
+}
+
+.count-unit {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--jj-muted);
+  margin-top: 0.3rem;
+}
+
+/* ---------- Nav Cards ---------- */
+.nav-card {
+  text-decoration: none;
+  display: block;
+}
+
+.nav-card-img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.nav-card:hover .nav-card-img {
+  transform: scale(1.05);
+}
+
+.nav-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.05) 60%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1.5rem 1.75rem;
+  transition: background var(--transition);
+}
+
+.nav-card:hover .nav-card-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.1) 60%);
+}
+
+.nav-card-label {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--jj-white);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.nav-card-icon {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: transform var(--transition), color var(--transition);
+}
+
+.nav-card:hover .nav-card-icon {
+  transform: translate(4px, -4px);
+  color: var(--jj-white);
+}
+
+/* ---------- Details Strip ---------- */
+.details-strip {
+  background: var(--jj-navy);
+  color: var(--jj-white);
+}
+
+.detail-tile {
+  padding: 1rem;
+}
+
+.detail-icon {
+  font-size: 2rem;
+  color: var(--jj-rose);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.detail-tile h5 {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 0.4rem;
+}
+
+.detail-tile p {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--jj-white);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ---------- Registry Section ---------- */
+.registry-section {
+  background-image: url('../img/the flower.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.registry-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.registry-pre {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--jj-accent);
+}
+
+.registry-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  color: var(--jj-dark);
+}
+
+.registry-body {
+  max-width: 520px;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--jj-muted);
+  line-height: 1.8;
+}
+
+/* ---------- RSVP ---------- */
+.rsvp-section {
+  background: var(--jj-sand);
+}
+
+.rsvp-form .form-control,
+.rsvp-form .form-select {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.rsvp-form .form-control:focus,
+.rsvp-form .form-select:focus {
+  border-color: var(--jj-rose);
+  box-shadow: 0 0 0 3px rgba(201, 149, 108, 0.18);
+}
+
+.rsvp-form .form-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--jj-muted);
+  margin-bottom: 0.4rem;
+}
+
+/* ---------- Footer ---------- */
+.jj-footer {
+  background: var(--jj-navy);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-monogram {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: var(--jj-white);
+  margin-bottom: 0.25rem;
+}
+
+.footer-date {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.25rem;
+}
+
+.footer-venue {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 0;
+}
+
+.footer-copy {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .nav-card-img {
+    will-change: transform;
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 767.98px) {
+  .hero-names {
+    letter-spacing: 0.02em;
+  }
+
+  .nav-card-img {
+    height: 220px;
+  }
+
+  .registry-section {
+    background-attachment: scroll;
+  }
+
+  .py-6 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+}

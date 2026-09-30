@@ -1,0 +1,170 @@
+/* ============================================================
+   Details Page — Specific Styles
+   ============================================================ */
+
+/* ---------- Hero ---------- */
+.details-hero {
+  background-image: url('../img/the roof.png');
+  background-size: cover;
+  background-position: center top;
+}
+
+/* ---------- Invitation Banner ---------- */
+.invitation-banner {
+  background: #fff;
+}
+
+.invite-text {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--jj-dark);
+}
+
+.invite-sub {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--jj-muted);
+  font-style: italic;
+}
+
+/* ---------- Venue Image ---------- */
+.venue-img-wrap {
+  position: relative;
+  overflow: hidden;
+  max-height: 480px;
+}
+
+.venue-full-img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.venue-img-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  padding: 2rem 1rem 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* ---------- Schedule Cards ---------- */
+.schedule-card {
+  background: var(--jj-sand);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.schedule-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08) !important;
+}
+
+.schedule-icon-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--jj-blush);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.schedule-icon-wrap i {
+  font-size: 1.4rem;
+  color: var(--jj-accent);
+}
+
+.schedule-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--jj-dark);
+}
+
+.schedule-list li {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--jj-muted);
+  padding: 0.3rem 0;
+}
+
+.schedule-list li i {
+  color: var(--jj-rose);
+}
+
+/* ---------- Dining ---------- */
+.dining-section {
+  background: var(--jj-sand);
+}
+
+.dining-item h5 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--jj-dark);
+  margin-bottom: 0.35rem;
+}
+
+.text-accent {
+  color: var(--jj-accent) !important;
+}
+
+/* ---------- Travel ---------- */
+.travel-section {
+  background: #fff;
+}
+
+.travel-card {
+  background: var(--jj-sand);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.travel-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--jj-blush);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.travel-icon-wrap i {
+  font-size: 1.3rem;
+  color: var(--jj-accent);
+}
+
+.travel-photo {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.stay-list li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding-bottom: 0.75rem;
+}
+
+.stay-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.bg-accent {
+  background-color: var(--jj-accent) !important;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+}

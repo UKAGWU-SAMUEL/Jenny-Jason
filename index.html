@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jenny & Jackson | September 20, 2025</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="jj-nav-wrap">
+    <nav class="jj-navbar navbar navbar-expand-lg">
+      <!-- Logo + date inline -->
+      <a class="jj-brand" href="index.html">
+        <span class="brand-monogram">J&amp;J</span>
+        <span class="brand-sep">·</span>
+        <span class="brand-date">Sept 20, 2025</span>
+      </a>
+
+      <!-- Mobile toggler -->
+      <button class="navbar-toggler jj-toggler ms-auto" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto jj-nav-links">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="story.html">Our Story</a></li>
+          <li class="nav-item"><a class="nav-link" href="details.html">Details</a></li>
+          <li class="nav-item"><a class="nav-link jj-rsvp-pill" href="#rsvp">RSVP</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero-section d-flex align-items-center justify-content-center text-center text-white">
+    <div class="hero-overlay"></div>
+    <div class="hero-content animate__animated animate__fadeIn">
+      <p class="hero-pre">We're getting married</p>
+      <h1 class="hero-names animate__animated animate__fadeInUp">Jenny &amp; Jackson</h1>
+      <p class="hero-date animate__animated animate__fadeInUp animate__delay-1s">
+        Saturday, September 20, 2025
+      </p>
+      <p class="hero-venue animate__animated animate__fadeInUp animate__delay-1s">
+        <i class="bi bi-geo-alt me-1"></i>The Golden Elm Manor &nbsp;·&nbsp; St. Augustine, New York
+      </p>
+      <a href="#rsvp" class="btn jj-btn-outline mt-4 animate__animated animate__fadeInUp animate__delay-2s">
+        RSVP Now
+      </a>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="countdown-section py-4 text-center">
+    <div class="container">
+      <p class="countdown-label mb-3">Counting down to forever</p>
+      <div class="d-flex justify-content-center gap-4 flex-wrap" id="countdown">
+        <div class="countdown-block">
+          <span class="count-num" id="days">--</span>
+          <span class="count-unit">Days</span>
+        </div>
+        <div class="countdown-block">
+          <span class="count-num" id="hours">--</span>
+          <span class="count-unit">Hours</span>
+        </div>
+        <div class="countdown-block">
+          <span class="count-num" id="minutes">--</span>
+          <span class="count-unit">Minutes</span>
+        </div>
+        <div class="countdown-block">
+          <span class="count-num" id="seconds">--</span>
+          <span class="count-unit">Seconds</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK NAV CARDS -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <a href="story.html" class="nav-card d-block position-relative overflow-hidden rounded-4">
+            <img src="assets/img/the hand.png" alt="Our Story" class="nav-card-img" />
+            <div class="nav-card-overlay">
+              <span class="nav-card-label">Our Story</span>
+              <i class="bi bi-arrow-right-circle nav-card-icon"></i>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="details.html" class="nav-card d-block position-relative overflow-hidden rounded-4">
+            <img src="assets/img/the building.png" alt="The Details" class="nav-card-img" />
+            <div class="nav-card-overlay">
+              <span class="nav-card-label">The Details</span>
+              <i class="bi bi-arrow-right-circle nav-card-icon"></i>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="#rsvp" class="nav-card d-block position-relative overflow-hidden rounded-4">
+            <img src="assets/img/the potato.png" alt="RSVP" class="nav-card-img" />
+            <div class="nav-card-overlay">
+              <span class="nav-card-label">RSVP</span>
+              <i class="bi bi-arrow-right-circle nav-card-icon"></i>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="#registry" class="nav-card d-block position-relative overflow-hidden rounded-4">
+            <img src="assets/img/single flower.png" alt="Registry" class="nav-card-img" />
+            <div class="nav-card-overlay">
+              <span class="nav-card-label">Registry</span>
+              <i class="bi bi-arrow-right-circle nav-card-icon"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENT DETAILS STRIP -->
+  <section class="details-strip py-5">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-sm-6 col-lg-3">
+          <div class="detail-tile">
+            <i class="bi bi-calendar-heart detail-icon"></i>
+            <h5>Date</h5>
+            <p>Saturday<br />September 20, 2025</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="detail-tile">
+            <i class="bi bi-clock detail-icon"></i>
+            <h5>Ceremony</h5>
+            <p>Begins at<br />4:30 PM</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="detail-tile">
+            <i class="bi bi-geo-alt detail-icon"></i>
+            <h5>Venue</h5>
+            <p>The Golden Elm Manor<br />St. Augustine, NY</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="detail-tile">
+            <i class="bi bi-music-note-beamed detail-icon"></i>
+            <h5>Reception</h5>
+            <p>6:00 PM – Midnight<br />Dinner &amp; Dancing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRY -->
+  <section class="registry-section py-6 text-center" id="registry">
+    <div class="registry-overlay"></div>
+    <div class="container position-relative z-1">
+      <p class="registry-pre">A note from us</p>
+      <h2 class="registry-heading">Registry</h2>
+      <div class="divider-line mx-auto my-4"></div>
+      <p class="registry-body mx-auto">
+        Your presence is the most cherished gift. Should you wish to contribute,
+        we've created a honeymoon registry to help us embark on a memorable
+        adventure to the <strong>Amalfi Coast</strong>.
+      </p>
+      <a href="#registry" class="btn jj-btn-solid mt-3">Go to Registry</a>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp-section py-5" id="rsvp">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7 text-center mb-4">
+          <p class="section-pre">Join us</p>
+          <h2 class="section-heading">RSVP</h2>
+          <div class="divider-line mx-auto my-3"></div>
+          <p class="text-muted">Kindly respond by August 1, 2025.</p>
+        </div>
+        <div class="col-lg-7">
+          <form class="rsvp-form p-4 p-md-5 rounded-4 shadow-sm bg-white">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" placeholder="Jenny" />
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" placeholder="Smith" />
+              </div>
+              <div class="col-12">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" placeholder="you@example.com" />
+              </div>
+              <div class="col-12">
+                <label class="form-label">Number of Guests</label>
+                <select class="form-select">
+                  <option>1 – Just me</option>
+                  <option>2 – Me &amp; a plus one</option>
+                  <option>3 guests</option>
+                  <option>4 guests</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Dietary Requirements</label>
+                <textarea class="form-control" rows="3" placeholder="Any allergies or dietary needs?"></textarea>
+              </div>
+              <div class="col-12">
+                <label class="form-label d-block mb-2">Will you be attending?</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="attendance" id="yes" value="yes" />
+                  <label class="form-check-label" for="yes">Joyfully accepts</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="attendance" id="no" value="no" />
+                  <label class="form-check-label" for="no">Regretfully declines</label>
+                </div>
+              </div>
+              <div class="col-12 text-center mt-2">
+                <button type="submit" class="btn jj-btn-solid px-5">Send RSVP</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="jj-footer text-center py-5">
+    <p class="footer-monogram">J &amp; J</p>
+    <p class="footer-date">Saturday, September 20, 2025</p>
+    <p class="footer-venue">The Golden Elm Manor · St. Augustine, New York</p>
+    <p class="footer-copy mt-4">&copy; 2025 Jenny &amp; Jackson. Made with <i class="bi bi-heart-fill text-danger"></i>
+      by <a href="https://www.jennyjacksonwedding.com" target="_blank" style="text-decoration: none;">Jenny &amp;
+        Jackson</a>.
+    </p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    window.addEventListener('scroll', function () {
+      document.querySelector('.jj-navbar').classList.toggle('scrolled', window.scrollY > 60);
+    });
+  </script>
+  <!-- Countdown script -->
+  <script>
+    (function () {
+      const target = new Date('2025-09-20T16:30:00');
+      function update() {
+        const now = new Date();
+        const diff = target - now;
+        if (diff <= 0) {
+          document.getElementById('countdown').innerHTML = '<p class="fs-4 fw-light">Today is the day! 🎉</p>';
+          return;
+        }
+        const d = Math.floor(diff / 86400000);
+        const h = Math.floor((diff % 86400000) / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        document.getElementById('days').textContent = String(d).padStart(2, '0');
+        document.getElementById('hours').textContent = String(h).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(m).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(s).padStart(2, '0');
+      }
+      update();
+      setInterval(update, 1000);
+    })();
+  </script>
+
+</body>
+
+</html>
